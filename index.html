@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Face Notes AI — Trait Assessment</title><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#f5f6fa;--ink:#202432;--muted:#777f90;--line:#e5e7ee;--purple:#5958e8;--soft:#f0f0ff;--navy:#171b2b;--green:#23855a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px 'DM Sans',sans-serif}.top{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,60px)}.brand{display:flex;align-items:center;gap:12px}.mark{width:40px;height:40px;border-radius:12px;background:var(--purple);color:white;display:grid;place-items:center;font:800 14px Manrope}.brand b{font:800 16px Manrope}.brand b span{font:700 10px 'DM Mono';background:#ededff;color:var(--purple);padding:4px 5px;border-radius:4px}.brand small{display:block;font-size:11px;color:var(--muted);margin-top:4px}.topnote{font-size:11px;color:#6b7281}.topnote i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#36a477;margin-right:7px}main{max-width:1450px;margin:auto;padding:35px clamp(16px,4vw,55px) 24px}.hero{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:25px}.eyebrow{font:500 10px 'DM Mono';letter-spacing:1.3px;color:var(--purple);margin-bottom:12px}h1{font:800 clamp(28px,3.2vw,42px)/1.15 Manrope;letter-spacing:-1.7px;margin:0 0 13px}h1 em{font-style:normal;color:var(--purple)}.hero p{color:var(--muted);font-size:13px;line-height:1.7;max-width:620px;margin:0}.hero-stat{min-width:150px;border:1px solid #deddff;background:#f0f0ff;border-radius:15px;padding:18px 22px;text-align:center}.hero-stat strong{display:block;font:800 36px Manrope;color:var(--purple)}.hero-stat span,.hero-stat small{display:block;font-size:12px}.hero-stat small{font-size:10px;color:var(--muted);margin-top:5px}.warning{display:flex;gap:12px;padding:13px 16px;border-radius:10px;border:1px solid #f0d8a3;background:#fff9ec;color:#7d6436;font-size:11px;line-height:1.6;margin-bottom:22px}.warning b{white-space:nowrap;color:#6e4c12}.layout{display:grid;grid-template-columns:minmax(300px,.78fr) minmax(440px,1.22fr);gap:19px;align-items:start}.left,.right{display:grid;gap:18px}.card{background:white;border:1px solid var(--line);border-radius:13px;padding:20px;box-shadow:0 2px 7px #1b203005;min-width:0}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.section-head>div:first-child{display:flex;align-items:center;gap:10px}.num{font:500 10px 'DM Mono';color:#858ba0}.section-head h2{font:800 15px Manrope;margin:0;letter-spacing:-.3px}.tag{font:10px 'DM Mono';border:1px solid var(--line);color:#777e8c;border-radius:5px;padding:5px 7px;white-space:nowrap}.upload{display:flex;align-items:center;justify-content:center;min-height:190px;border:1px dashed #c9cbe0;background:#fafaff;border-radius:10px;cursor:pointer;overflow:hidden}.upload input{position:absolute;width:1px;height:1px;opacity:0}.upload>div{text-align:center;color:#626a7c}.uploadglyph{font-size:25px;color:var(--purple);background:#ededff;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin:0 auto 10px}.upload b{display:block;font-size:12px;color:#353a49}.upload small{display:block;font-size:10px;color:#9298a7;margin-top:8px}.upload img{width:100%;max-height:340px;object-fit:contain;background:#171923}.img-meta{display:flex;justify-content:space-between;gap:10px;padding:9px 0 17px;color:#858b98;font:10px 'DM Mono'}.label{display:block;font-size:11px;font-weight:700;margin:14px 0 7px;color:#4e5462}.label small{font:9px 'DM Mono';color:#989eac;margin-left:6px}.card input[type=password],select{width:100%;padding:10px 11px;border:1px solid #e0e3eb;border-radius:7px;background:white;color:var(--ink);font:12px 'DM Sans';outline:none}.card input:focus,select:focus{border-color:#9b9cf5;box-shadow:0 0 0 3px #5958e814}.hint{font-size:10px;color:#818898;line-height:1.65;margin:7px 0}.primary,.secondary{border:1px solid #dedfeb;border-radius:8px;padding:10px 13px;font:700 11px 'DM Sans';cursor:pointer;background:white;color:#505666}.primary{background:var(--purple);border-color:var(--purple);color:white}.primary:disabled,.secondary:disabled{opacity:.42;cursor:not-allowed}.full{width:100%;margin-top:17px;padding:12px}.status{font-size:10px;line-height:1.6;color:#777e8c;margin-top:10px}.status.error{color:#b23e47}.check{display:flex;gap:9px;align-items:flex-start;font-size:11px;line-height:1.5;margin:12px 0;color:#555c6b}.check input{accent-color:var(--purple);margin-top:2px}.results-card{min-height:390px}.result-tools{display:flex;gap:8px;align-items:center}.secondary{padding:7px 10px}.placeholder{min-height:280px;border:1px dashed #e1e3ed;background:#fcfcff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:30px;color:#737a8a}.placeholder-icon{font-size:35px;color:var(--purple);margin-bottom:12px}.placeholder b{font:700 13px Manrope;color:#343949}.placeholder p{max-width:330px;font-size:11px;line-height:1.7}.progress-label{display:flex;justify-content:space-between;font-size:11px;color:#626979;margin-bottom:8px}.progress{height:6px;border-radius:6px;background:#eeeef7;overflow:hidden;margin-bottom:15px}.progress span{display:block;height:100%;width:0;background:var(--purple);transition:width .2s}.region{border:1px solid var(--line);border-radius:9px;margin:12px 0;overflow:hidden}.region-head{background:#fafaff;padding:11px 13px;display:flex;justify-content:space-between;font:700 11px Manrope}.region-head small{font:10px 'DM Mono';color:#7d8492}.trait{padding:13px;border-top:1px solid #f0f1f5}.trait-top{display:grid;grid-template-columns:minmax(110px,.65fr) minmax(150px,1fr);gap:12px;align-items:center}.trait-name{font-size:11px;font-weight:700}.trait-view{font:9px 'DM Mono';color:#9a9eaa;display:block;margin-top:4px}.trait select{padding:8px;font-size:11px}.trait-bottom{display:grid;grid-template-columns:90px 1fr;gap:10px;margin-top:8px}.trait-bottom label{font-size:9px;color:#8b91a0}.trait-bottom input{display:block;width:100%;margin-top:4px;padding:7px 8px;border:1px solid #e5e6ed;border-radius:6px;font:10px 'DM Sans'}.trait-bottom .confidence{padding:7px;border-radius:6px;background:#f6f6ff;color:#5a5bd1;font:10px 'DM Mono';margin-top:4px}.exports{display:flex;gap:8px;flex-wrap:wrap}.exports button{flex:1}footer{display:flex;justify-content:space-between;gap:15px;padding:22px 2px 0;color:#8d93a0;font:9px 'DM Mono'}@media(max-width:980px){.layout{grid-template-columns:1fr}.left{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.hero-stat{display:none}}@media(max-width:620px){.top{height:65px}.topnote{display:none}main{padding-top:24px}.left{grid-template-columns:1fr}.card{padding:15px}.hero{margin-bottom:20px}.trait-top{grid-template-columns:1fr}.trait-bottom{grid-template-columns:80px 1fr}.section-head{align-items:flex-start}.result-tools{flex-wrap:wrap;justify-content:flex-end}footer{flex-direction:column}}
+
+.key-note{border:1px solid #e5e5fb;background:#f8f8ff;border-radius:7px;padding:10px;font-size:10px;line-height:1.6;color:#656b7b;margin-top:14px}.key-note code{font-family:'DM Mono';color:#5757d8}.table-wrap{width:100%;overflow-x:auto}.results-table{border-collapse:collapse;width:100%;min-width:850px;font-size:11px}.results-table th{background:#f8f8fc;color:#72798a;text-align:left;font:500 9px 'DM Mono';letter-spacing:.3px;padding:11px 9px;border-bottom:1px solid var(--line);position:sticky;top:0}.results-table td{padding:9px;border-bottom:1px solid #eef0f4;vertical-align:top}.results-table tr:hover td{background:#fcfcff}.results-table .region-cell{font-weight:700;color:#555b6a;min-width:105px}.results-table .trait-cell{font-weight:700;min-width:120px}.results-table select{min-width:150px;padding:7px;font-size:10px}.results-table input{min-width:80px;width:100%;padding:7px;border:1px solid #e2e4eb;border-radius:5px;font:10px 'DM Sans'}.results-table .notes-input{min-width:190px}.results-table .confidence-cell{font:10px 'DM Mono';color:#5a5bd1;white-space:nowrap}.results-table .view-cell{font-size:10px;color:#858b99;min-width:95px}
+
+</style></head>
+<body><header class="top"><div class="brand"><div class="mark">FN</div><div><b>Face Notes <span>AI</span></b><small>Broad facial-feature summary</small></div></div><div class="topnote"><i></i> Browser-based prototype</div></header>
+<main><section class="hero"><div><div class="eyebrow">IMAGE → STRUCTURED OBSERVATIONS</div><h1>Turn a portrait into a<br><em>simple facial-feature summary.</em></h1><p>Upload one portrait. Gemini classifies up to 10 broad, visible facial-feature groups. Review and edit the results in the table.</p></div><div class="hero-stat"><strong>10</strong><span>broad feature groups</span><small>simple visual summary</small></div></section>
+<div class="warning"><b>Local demo</b><span>This single-file version can demonstrate the interface without an API key using the sample-results button. For real Gemini analysis, configure a temporary key in the JavaScript source. This version calls Gemini directly from your browser using a key hardcoded in app.js. Anyone who can access the site can extract that key. Use only a temporary, restricted key and revoke it when finished. The image is sent to Google Gemini for analysis.</span></div>
+<section class="layout"><div class="left">
+<article class="card"><div class="section-head"><div><span class="num">01</span><h2>Image & API setup</h2></div><span class="tag">REQUIRED</span></div>
+<label class="upload" id="dropZone"><input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp"><div id="emptyUpload"><div class="uploadglyph">↑</div><b>Drop portrait here or browse</b><small>One portrait · JPG, PNG, WEBP · max 10 MB</small></div><img id="preview" hidden alt="Portrait preview"></label>
+<div class="img-meta"><span id="fileName">No image selected</span><span id="dimensions">—</span></div>
+<div class="key-note">Gemini key is configured in <code>app.js</code>. See README before publishing.</div>
+<label class="label" for="model">Gemini model</label><select id="model"><option value="gemini-3.8-flash" selected>Gemini 3.8 Flash</option></select>
+<label class="label" for="view">Portrait type</label><select id="view"><option>Any portrait angle</option></select>
+<button class="primary full" id="analyzeBtn" disabled>✦ Analyze with Gemini</button><button class="secondary full" id="demoBtn">Preview with sample results (no API call)</button><div id="status" class="status" aria-live="polite">Add a profile image to begin.</div>
+</article>
+<article class="card"><div class="section-head"><div><span class="num">02</span><h2>Analysis settings</h2></div></div><label class="check"><input id="allowUnclear" type="checkbox" checked> Allow “Unable to determine” when evidence is insufficient</label><p class="hint">This is a broad visual summary, not a precise measurement or identity assessment. Only classify visible features; use “Unable to determine” when needed.</p></article>
+</div>
+<div class="right">
+<article class="card results-card"><div class="section-head"><div><span class="num">03</span><h2>AI assessment table</h2></div><div class="result-tools"><span id="resultCount" class="tag">0 / 10 categories</span><button class="secondary" id="resetResults">Clear</button></div></div>
+<div id="placeholder" class="placeholder"><div class="placeholder-icon">◎</div><b>Your 10-category summary will appear here</b><p>Gemini will classify up to 10 broad facial-feature groups, add short notes, and flag features it cannot assess reliably.</p></div>
+<div id="progressWrap" hidden><div class="progress-label"><span id="progressText">Analyzing image…</span><span id="progressPct">0%</span></div><div class="progress"><span id="progressBar"></span></div></div>
+<div id="results" class="table-wrap"></div>
+</article>
+<article class="card export-card"><div class="section-head"><div><span class="num">04</span><h2>Review & export</h2></div></div><p class="hint">Edit any category or note before exporting. Score is optional and is not automatically inferred from named categories.</p><div class="exports"><button class="secondary" id="exportCsv" disabled>Export CSV</button><button class="secondary" id="exportJson" disabled>Export JSON</button><button class="primary" id="exportMd" disabled>Export report</button></div></article>
+</div></section><footer><span>FACE NOTES AI · STATIC JAVASCRIPT APP</span><span>No backend · no key persistence · no identity recognition</span></footer></main><script>
+window.FACIAL_TRAITS = [
+  {
+    "region": "Overall face",
+    "trait": "Face shape",
+    "categories": [
+      "Oval",
+      "Round",
+      "Square",
+      "Rectangular",
+      "Heart-shaped",
+      "Diamond-shaped",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Forehead",
+    "trait": "Forehead and hairline",
+    "categories": [
+      "Broad",
+      "Narrow",
+      "High",
+      "Low",
+      "Rounded hairline",
+      "Angular hairline",
+      "Partly obscured",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Eyebrows",
+    "trait": "Brow shape",
+    "categories": [
+      "Straight",
+      "Softly arched",
+      "High arch",
+      "Angled",
+      "Rounded",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Eyes",
+    "trait": "Eye shape",
+    "categories": [
+      "Almond",
+      "Round",
+      "Hooded",
+      "Deep-set appearance",
+      "Prominent appearance",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Nose",
+    "trait": "Nose shape",
+    "categories": [
+      "Straight profile",
+      "Convex profile",
+      "Concave profile",
+      "Broad",
+      "Narrow",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Cheeks",
+    "trait": "Cheekbone prominence",
+    "categories": [
+      "Prominent",
+      "Moderate",
+      "Subtle",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Mouth",
+    "trait": "Lip fullness / mouth shape",
+    "categories": [
+      "Full lips",
+      "Medium lips",
+      "Thin lips",
+      "Wide mouth",
+      "Narrow mouth",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Jaw",
+    "trait": "Jawline shape",
+    "categories": [
+      "Angular",
+      "Rounded",
+      "Tapered",
+      "Broad",
+      "Narrow",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Chin",
+    "trait": "Chin shape",
+    "categories": [
+      "Rounded",
+      "Pointed",
+      "Square",
+      "Broad",
+      "Narrow",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  },
+  {
+    "region": "Ears",
+    "trait": "Visible ear shape / prominence",
+    "categories": [
+      "Close-set appearance",
+      "Prominent appearance",
+      "Rounded outline",
+      "Angular outline",
+      "Partly obscured",
+      "Unable to determine"
+    ],
+    "view": "Any portrait"
+  }
+];
+
+</script><script>
+const $=id=>document.getElementById(id);
+const GEMINI_API_KEY = "AQ.Ab8RN6JK178DgvCx1YGAQpXU4zWKAOiRNAKGUoTWDBWeSp91Pw"; // Replace before running; never commit a real key to a public repository.
+let imageFile=null, imageData=null, imageMime=null, imageDims=null, results=[], busy=false;
+const traitList=window.FACIAL_TRAITS;
+const unavailable="Unable to determine";
+$("imageInput").addEventListener("change",e=>loadImage(e.target.files[0]));
+const dz=$("dropZone");
+["dragover","dragenter"].forEach(n=>dz.addEventListener(n,e=>{e.preventDefault();dz.style.borderColor="#5958e8"}));
+["dragleave","drop"].forEach(n=>dz.addEventListener(n,e=>{e.preventDefault();dz.style.borderColor=""}));
+dz.addEventListener("drop",e=>loadImage(e.dataTransfer.files[0]));
+function hasConfiguredKey(){return GEMINI_API_KEY && !GEMINI_API_KEY.includes("PASTE_YOUR_");}
+function updateReady(){$("analyzeBtn").disabled=busy||!imageData||!hasConfiguredKey();}
+function loadImage(file){
+ if(!file)return;if(!["image/jpeg","image/png","image/webp"].includes(file.type)){setStatus("Use a JPG, PNG, or WEBP image.","error");return}
+ if(file.size>10*1024*1024){setStatus("Image must be smaller than 10 MB.","error");return}
+ imageFile=file;imageMime=file.type;const reader=new FileReader();reader.onload=()=>{imageData=reader.result.split(",")[1];const img=$("preview");img.src=reader.result;img.hidden=false;$("emptyUpload").hidden=true;const probe=new Image();probe.onload=()=>{imageDims=`${probe.naturalWidth} × ${probe.naturalHeight}`;$("dimensions").textContent=imageDims};probe.src=reader.result;$("fileName").textContent=file.name;setStatus("Image loaded. Add your Gemini key to analyze.");updateReady();};reader.readAsDataURL(file);
+}
+function setStatus(s,kind=""){$("status").textContent=s;$("status").className="status "+kind}
+function promptForTraits(){
+ const allow=$("allowUnclear").checked;
+ return `You are a careful visual documentation assistant. From this single portrait, produce a broad, non-identifying description of visible facial structure only. Do not identify the person or infer personality, health, ethnicity, race, age, sex, attractiveness, or other sensitive attributes. Do not invent precise measurements. Ignore whether the image is frontal, three-quarter, or profile; classify the features that are reasonably visible from the provided angle. Return exactly one result for each of the 10 feature groups below. For each result, choose exactly one category from that feature's listed options. Never invent a category. If the feature is not visible enough, choose "${unavailable}" where allowed. Keep notes short and visual. Confidence is a rough self-estimate from 0 to 1, not a calibrated probability. Scores must remain blank. Return valid JSON only, no markdown, in this schema: {"summary":"brief image-quality note","results":[{"region":"exact region","trait":"exact trait","category":"one allowed category","confidence":0.0,"notes":"short visual rationale or limitation"}]}. ${allow?'Use "Unable to determine" whenever there is not enough visual evidence.':'Choose the best-supported category when reasonably visible, but never guess when evidence is absent.'}
+Feature groups and allowed categories:
+${JSON.stringify(traitList.map(t=>({region:t.region,trait:t.trait,categories:t.categories})))}`;
+}
+async function analyze(){
+ if(busy||!imageData)return;
+ if(!hasConfiguredKey()){setStatus("Add your temporary Gemini API key to GEMINI_API_KEY in this HTML file, then reload the page.","error");return;}
+ busy=true;updateReady();$("placeholder").hidden=true;$("progressWrap").hidden=false;$("results").innerHTML="";$("progressBar").style.width="10%";$("progressPct").textContent="10%";$("progressText").textContent="Sending image to Gemini…";setStatus("Calling Gemini 3.8 Flash via the Interactions API directly from this browser. Keep this tab open.");
+ try{
+  const model=$("model").value, key=GEMINI_API_KEY;
+  const endpoint="https://generativelanguage.googleapis.com/v1beta/interactions";
+  const response=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","x-goog-api-key":key},body:JSON.stringify({model,input:[{type:"text",text:promptForTraits()},{type:"image",mime_type:imageMime,data:imageData}],store:false})});
+  $("progressBar").style.width="70%";$("progressPct").textContent="70%";$("progressText").textContent="Validating structured results…";
+  const body=await response.json();
+  if(!response.ok)throw new Error(body.error?.message||`Gemini API returned ${response.status}`);
+  const raw=body.output_text || body.steps?.filter(s=>s.type==="model_output").flatMap(s=>s.content||[]).map(p=>p.text||"").join("") || "";
+  if(!raw)throw new Error("Gemini returned no text. Try a different image or model.");
+  let parsed;try{parsed=JSON.parse(raw.replace(/^```json\s*/i,"").replace(/\s*```$/,""));}catch{throw new Error("Gemini response was not valid JSON. Please retry.");}
+  const byKey=new Map((parsed.results||[]).map(r=>[`${r.region}|||${r.trait}`,r]));
+  results=traitList.map(t=>{
+   const r=byKey.get(`${t.region}|||${t.trait}`);
+   const category=r?.category;
+   const valid=category&&t.categories.includes(category);
+   return {...t,category:valid?category:(allowUnclear()?unavailable:t.categories[0]),confidence:typeof r?.confidence==="number"?Math.max(0,Math.min(1,r.confidence)):null,notes:r?.notes||(!valid?"Category was missing or did not match the spreadsheet options. Please review.":""),score:""};
+  });
+  $("progressBar").style.width="100%";$("progressPct").textContent="100%";$("progressText").textContent="Complete";renderResults();setStatus(`Analysis complete: ${results.length} broad feature groups returned. Review and correct every result before using it.`);
+ }catch(e){$("placeholder").hidden=false;setStatus(e.message||"Analysis failed. Check your key and connection.","error");}
+ finally{busy=false;updateReady();setTimeout(()=>{$("progressWrap").hidden=true},900);}
+}
+function allowUnclear(){return $("allowUnclear").checked}
+function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderResults(){
+ const rows=results.map((r,i)=>`<tr>
+ <td class="region-cell">${escapeHtml(r.region)}</td>
+ <td class="trait-cell">${escapeHtml(r.trait)}</td>
+ <td class="view-cell">${escapeHtml(r.view)}</td>
+ <td><select data-i="${i}" class="category">${[...r.categories,...(allowUnclear()?[unavailable]:[])].map(c=>`<option ${c===r.category?"selected":""}>${escapeHtml(c)}</option>`).join("")}</select></td>
+ <td class="confidence-cell">${r.confidence===null?"Not provided":Math.round(r.confidence*100)+"%"}</td>
+ <td><input type="number" min="1" max="5" step="1" placeholder="—" value="${escapeHtml(r.score)}" data-score="${i}"></td>
+ <td><input class="notes-input" type="text" data-note="${i}" value="${escapeHtml(r.notes)}" placeholder="Visual evidence / limitation"></td>
+ </tr>`).join("");
+ $("results").innerHTML=`<table class="results-table"><thead><tr><th>Feature area</th><th>Feature</th><th>Scope</th><th>Broad category (editable)</th><th>Confidence*</th><th>Score</th><th>Notes (editable)</th></tr></thead><tbody>${rows}</tbody></table><p class="hint">*Model confidence is an uncalibrated estimate, not a validated probability. Review all categories before relying on them.</p>`;
+ $("results").querySelectorAll("[data-i]").forEach(el=>el.addEventListener("change",e=>{results[+e.target.dataset.i].category=e.target.value;updateCount()}));
+ $("results").querySelectorAll("[data-score]").forEach(el=>el.addEventListener("change",e=>{let v=e.target.value;results[+e.target.dataset.score].score=v===""?"":Math.max(1,Math.min(5,Number(v)));e.target.value=results[+e.target.dataset.score].score}));
+ $("results").querySelectorAll("[data-note]").forEach(el=>el.addEventListener("change",e=>results[+e.target.dataset.note].notes=e.target.value));
+ ["exportCsv","exportJson","exportMd"].forEach(id=>$(id).disabled=false);updateCount();
+}
+function updateCount(){$("resultCount").textContent=`${results.length} / ${traitList.length} traits`; }
+$("analyzeBtn").addEventListener("click",analyze);
+$("resetResults").addEventListener("click",()=>{if(!confirm("Clear the current assessment?"))return;results=[];$("results").innerHTML="";$("placeholder").hidden=false;["exportCsv","exportJson","exportMd"].forEach(id=>$(id).disabled=true);$("resultCount").textContent=`0 / ${traitList.length} categories`;setStatus("Summary cleared.");});
+function exportData(){return {createdAt:new Date().toISOString(),image:{name:imageFile?.name||null,dimensions:imageDims||null,selectedView:$("view").value},model:$("model").value,summary:"AI-generated visual observations. Confidence is an uncalibrated model estimate. Human review required.",results:results.map(({region,trait,categories,view,category,confidence,notes,score})=>({region,trait,allowedCategories:categories,bestPhotoView:view,category,confidence,score:score===""?null:Number(score),notes}))};}
+function download(name,data,type){const blob=new Blob([data],{type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
+function csvEscape(v){return `"${String(v??"").replace(/"/g,'""')}"`}
+$("exportJson").addEventListener("click",()=>download("facial-traits-assessment.json",JSON.stringify(exportData(),null,2),"application/json"));
+$("exportCsv").addEventListener("click",()=>{const rows=[["Region","Trait","Allowed categories","Best photo view","AI category","Confidence estimate","Score (1-5)","Notes"],...results.map(r=>[r.region,r.trait,r.categories.join(" | "),r.view,r.category,r.confidence??"",r.score,r.notes])];download("facial-traits-assessment.csv",rows.map(r=>r.map(csvEscape).join(",")).join("\r\n"),"text/csv;charset=utf-8")});
+$("exportMd").addEventListener("click",()=>{const md=`# Broad facial-feature summary\n\n- Image: ${imageFile?.name||"Not recorded"}\n- Dimensions: ${imageDims||"Unknown"}\n- Photo view: ${$("view").value}\n- Model: ${$("model").value}\n\n> AI-generated visual observations; confidence estimates are not calibrated probabilities. Review results manually. Not for identity recognition or sensitive attribute inference.\n\n| Region | Trait | Category | Confidence | Score | Notes |\n|---|---|---|---:|---:|---|\n${results.map(r=>`| ${r.region} | ${r.trait} | ${r.category} | ${r.confidence===null?"—":Math.round(r.confidence*100)+"%"} | ${r.score||"—"} | ${(r.notes||"").replace(/\|/g,"\\|")} |`).join("\n")}\n`;download("facial-traits-assessment.md",md,"text/markdown;charset=utf-8")});
+
+
+
+$("demoBtn").addEventListener("click",()=>{
+ if(busy)return;
+ results=traitList.map((t,i)=>({
+  ...t,
+  category: t.categories.includes("Unable to determine") ? "Unable to determine" : (t.categories[0] || "Unable to determine"),
+  confidence: [0.72,0.84,0.66,0.91,0.78][i%5],
+  notes:"DEMO ONLY — placeholder category, not generated by Gemini.",
+  score:""
+ }));
+ $("placeholder").hidden=true;
+ renderResults();
+ setStatus("Demo table loaded. These are placeholder values to demonstrate editing and export; no image was analyzed and no API call was made.");
+});
+
+updateReady();
+
+</script></body></html>
